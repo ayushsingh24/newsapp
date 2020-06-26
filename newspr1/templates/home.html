@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NEWS HEADLINES</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0/">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <h1 id="heading">TOP NEWS HEADLINES</h1>
+        <br/>
+        
+        <form action="{% url 'home' %}" method="POST">
+            <div id="bttns">
+                {% csrf_token %}
+                <input type="submit" name="Business" value="HEADLINES" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="business" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="entertainment" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="health" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="science" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="sport" />
+                {% csrf_token %}
+                <input type="submit" name="Business" value="technology" />
+            </div>
+            </form>
+        <br/>
+
+        {% for i in data %}
+            <div class="code">
+                <p class="main">{{ i.title }}</p>
+
+                    <a href="{{ i.urlToImage }}/" target="_blank"><img src="{{ i.urlToImage }}/"></a>
+                    <br/>
+                    <div class="describe">{{ i.description }}</div>
+
+                <p class="cntn">{{ i.content }}</p>
+
+                <p class="lnk">
+                    <span>To get more information</span>
+                    <a href="{{ i.url }}/" target="_blank">Click here</a>
+                </p>
+                
+            </div>
+            <br/><br/><br/><br/>
+        {% endfor %}
+        
+    </body>
+</html>
