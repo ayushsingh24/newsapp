@@ -16,6 +16,7 @@ h1{
     font-weight: bold;
     font-style: normal;
     background-color: white;
+    
 }
 
 div#bttns{
@@ -62,8 +63,8 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 300px;
+    width: 50%;
+    height: 50%;
 }
 
 div.describe{
