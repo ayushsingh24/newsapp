@@ -1,17 +1,18 @@
 {% load static %}
+{% load translate_data %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title>NEWS HEADLINES</title>
+        <title>{% translate "TOP NEWS" %}</title>
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0/">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
-        <h1 id="heading">TOP NEWS</h1>
+        <h1 id="heading">{% translate "TOP NEWS" %}</h1>
         <br/>
         
-        <form action="{% url 'home' %}" method="POST">
+        <form action="{% url 'news in hindi' %}" method="POST">
             <div id="bttns">
                 {% csrf_token %}
                 <input type="submit" name="Business" value="HEADLINES" />
@@ -27,27 +28,29 @@
                 <input type="submit" name="Business" value="sport" />
                 {% csrf_token %}
                 <input type="submit" name="Business" value="technology" />
-            </div>    
+            </div>
         </form>
-        
+
         <div>
-            <a href="{% url 'news in hindi' %}"><button> NEWS IN HINDI</button></a>
+            <a href="{% url 'home' %}"><button> NEWS IN ENGLISH</button></a>
         </div>
-        <br/><br/>
+        <br/>
 
         {% for i in data %}
             <div class="code">
-                <p class="main">{{ i.title }}</p>
+                
+                <p class="main">{% translate i.title %}</p>
 
                     <a href="{{ i.urlToImage }}/" target="_blank"><img src="{{ i.urlToImage }}/"></a>
                     <br/>
-                    <div class="describe">{{ i.description }}</div>
 
-                <p class="cntn">{{ i.content }}</p>
+                    <div class="describe" lang="hi">{% translate i.description %}</div>
+
+                <p class="cntn">{% translate i.content %}</p>
 
                 <p class="lnk">
-                    <span>To get more information</span>
-                    <a href="{{ i.url }}/" target="_blank">Click here</a>
+                    <span>{% translate "To get more information" %}</span>
+                    <a href="{{ i.url }}/" target="_blank">{% translate "Click here" %}</a>
                 </p>
                 
             </div>

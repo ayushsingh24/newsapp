@@ -36,6 +36,24 @@ div input{
     cursor: pointer;
 }
 
+div button{
+    float: right;
+    background-color: black;
+    border: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+button:hover{
+    color: black;
+    background-color: white;
+}
+
 input:hover{
     color: orangered;
     background-color: white;
