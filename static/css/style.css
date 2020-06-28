@@ -12,6 +12,8 @@ h1{
     margin-right: auto;
     margin-bottom: 30px;
     padding: 15px;
+    border: 5px;
+    border-radius: 5px;
     font-size: 50px;
     font-weight: bold;
     font-style: normal;
@@ -26,31 +28,37 @@ div#bttns{
 
 div input{
     background-color: rgb(255, 80, 40);
-    border: none;
-    font-weight: bold;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 1vw;
-    cursor: pointer;
-}
-
-div button{
-    float: right;
-    background-color: black;
-    border: 3px;
+    border: 5px;
     border-radius: 5px;
     font-weight: bold;
     color: white;
     padding: 15px 32px;
     text-align: center;
-    font-size: 1vw;
+    display: inline-block;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+div.hindi{
+    text-align: center;
+}
+
+div button{
+    background-color: green;
+    width: 40% ;
+    height: 75px;
+    border: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1.5vw;
     cursor: pointer;
 }
 
 button:hover{
-    color: black;
+    color: green;
     background-color: white;
 }
 

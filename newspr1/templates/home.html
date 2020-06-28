@@ -1,4 +1,5 @@
 {% load static %}
+{% load translate_data %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,10 +32,9 @@
         </form>
         
         <br/>
-        <div>
-            <a href="{% url 'news in hindi' %}"><button> NEWS IN HINDI</button></a>
+        <div class="hindi">
+            <a href="{% url 'news in hindi' %}"><button lang="hi">{% translate "news in hindi" %}</button></a>
         </div>
-        <br/><br/>
 
         {% for i in data %}
             <div class="code">
