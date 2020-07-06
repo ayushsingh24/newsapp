@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2to7tti!$2%3*0epdgm!=9^+8)f^gq!*fgpsbjc6zx(-z_$(ti'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['news24-7.herokuapp.com','127.0.0.1',
     'localhost']
