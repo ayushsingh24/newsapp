@@ -1,0 +1,119 @@
+body{
+    background-image: url("/static/images/bgdimg.jpg") ;
+    background-attachment: fixed , scroll;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 5px;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    background-color: white;
+    
+}
+
+div#bttns{
+    display: flex;
+    justify-content: center;
+}
+
+div input{
+    background-color: rgb(255, 80, 40);
+    border: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+div.hindi{
+    text-align: center;
+}
+
+div button{
+    background-color: green;
+    width: 40% ;
+    height: 75px;
+    border: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+button:hover{
+    color: green;
+    background-color: white;
+}
+
+input:hover{
+    color: orangered;
+    background-color: white;
+}
+
+.main{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+div.code{
+    background: papayawhip;
+    padding: 10px 15px 10px 15px;
+    border: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    outline-color: black;
+    margin: 30px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+}
+
+div.describe{
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: x-large;
+    font-style: normal;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+p.lnk{
+    text-align: right;
+    font-style: italic;
+    color: red;
+    font-size: large;
+}
+
+p.cntn{
+    text-align: center;
+    font-style: normal;
+    font-size: x-large;
+    color: black;
+    font-weight: bold;
+}
