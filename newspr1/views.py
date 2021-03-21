@@ -10,7 +10,7 @@ def home(request):
             try:
                 api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&apiKey=b2978c74ac7c4e69880b01358540a4ab")
                 api_data = json.loads(api_request.content)
-            except Exception as e:
+            except Exception:
                 api_data = "Some error occured..."
 
             data = api_data.get("articles")
@@ -21,9 +21,9 @@ def home(request):
 
         else:
             try:
-                api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&category=" + category + "&apiKey=b2978c74ac7c4e69880b01358540a4ab")
+                api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&category=" + category.lower() + "&apiKey=b2978c74ac7c4e69880b01358540a4ab")
                 api_data = json.loads(api_request.content)
-            except Exception as e:
+            except Exception:
                 api_data = "Some error occured..."
 
             data = api_data.get("articles")
@@ -37,7 +37,7 @@ def home(request):
         try:
             api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&apiKey=b2978c74ac7c4e69880b01358540a4ab")
             api_data = json.loads(api_request.content)
-        except Exception as e:
+        except Exception:
             api_data = "Some error occured..."
 
         data = api_data.get("articles")
@@ -56,7 +56,7 @@ def other_language(request):
             try:
                 api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&apiKey=b2978c74ac7c4e69880b01358540a4ab")
                 api_data = json.loads(api_request.content)
-            except Exception as e:
+            except Exception:
                 api_data = "Some error occured..."
 
             data = api_data.get("articles")
@@ -67,9 +67,9 @@ def other_language(request):
 
         else:
             try:
-                api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&category=" + category + "&apiKey=b2978c74ac7c4e69880b01358540a4ab")
+                api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&category=" + category.lower() + "&apiKey=b2978c74ac7c4e69880b01358540a4ab")
                 api_data = json.loads(api_request.content)
-            except Exception as e:
+            except Exception:
                 api_data = "Some error occured..."
 
             data = api_data.get("articles")
@@ -82,7 +82,7 @@ def other_language(request):
         try:
             api_request = requests.get("http://newsapi.org/v2/top-headlines?country=in&apiKey=b2978c74ac7c4e69880b01358540a4ab")
             api_data = json.loads(api_request.content)
-        except Exception as e:
+        except Exception:
             api_data = "Some error occured..."
 
         data = api_data.get("articles")
